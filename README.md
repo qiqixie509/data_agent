@@ -39,7 +39,7 @@ Because the data agents at their core are performing research and generation tas
 - Answer Relevance
 - Context Relevance
 - Groundedness
-![rag_triad](pictures/rag_triad.png)
+![rag_triad](pictures/RAG_triad.png)
 
 ### OpenTelemetry traces and evaluations
 
