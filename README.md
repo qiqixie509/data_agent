@@ -2,9 +2,9 @@
 This is a multi-agent system that can perform web research, answer questions and generate charts, integrated with Snowflake Cortex Agents for grounded data and private data access.
 
 ## Environment
-LangChain: Planner, Executor, Web Researcher, Chart Generator, Chart Summarizer, Synthesizer
-Snowflake: Provide grounded data for the cortex researcher
-Trulens: an open-source library designed for evaluating and tracking LLM applications, particularly those built with RAG and agentic workflows.
+LangChain: Planner, Executor, Web Researcher, Chart Generator, Chart Summarizer, Synthesizer      
+Snowflake: Provide grounded data for the cortex researcher       
+Trulens: an open-source library designed for evaluating and tracking LLM applications, particularly those built with RAG and agentic workflows.         
 
 ``` bash
 # install dependencies
