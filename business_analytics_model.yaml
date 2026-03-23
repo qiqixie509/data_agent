@@ -1,0 +1,78 @@
+name: business_analytics_model
+description: Business analytics semantic model for Cortex Analyst
+
+tables:
+  - name: business_analytics
+    description: Semantic layer built from BUSINESS_ANALYTICS semantic view
+    base_table:
+      database: SNOWFLAKE_LEARNING_DB
+      schema: CORTEX_AGENTS
+      table: BUSINESS_ANALYTICS
+
+    dimensions:
+      - name: sale_date
+        expr: SALE_DATE
+        data_type: date
+        synonyms: ["date", "transaction date", "sale date"]
+        description: Date of sale transaction
+
+      - name: sales_region
+        expr: REGION
+        data_type: string
+        synonyms: ["sales region", "territory", "market"]
+        description: Sales region
+
+      - name: customer_name
+        expr: CUSTOMER_NAME
+        data_type: string
+        synonyms: ["customer", "client", "buyer"]
+        description: Customer name
+
+      - name: customer_region
+        expr: REGION
+        data_type: string
+        synonyms: ["geography", "location", "area"]
+        description: Customer geographic region
+
+      - name: customer_segment
+        expr: CUSTOMER_SEGMENT
+        data_type: string
+        synonyms: ["segment", "tier", "category"]
+        description: Customer segmentation tier
+
+      - name: product_name
+        expr: PRODUCT_NAME
+        data_type: string
+        synonyms: ["product", "item", "merchandise"]
+        description: Product name
+
+      - name: category
+        expr: CATEGORY
+        data_type: string
+        synonyms: ["category", "type", "class"]
+        description: Product category
+
+    measures:
+      - name: total_sales
+        expr: TOTAL_AMOUNT
+        agg: sum
+        synonyms: ["revenue", "sales amount", "total revenue"]
+        description: Total sales revenue
+
+      - name: avg_sale_value
+        expr: TOTAL_AMOUNT
+        agg: avg
+        synonyms: ["average sale", "AOV", "average transaction"]
+        description: Average sale value
+
+      - name: total_transactions
+        expr: SALE_ID
+        agg: count
+        synonyms: ["transaction count", "sales count", "number of sales"]
+        description: Total number of transactions
+
+      - name: unique_customers
+        expr: CUSTOMER_ID
+        agg: count_distinct
+        synonyms: ["customer count", "active customers", "unique buyers"]
+        description: Number of unique customers
