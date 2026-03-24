@@ -78,8 +78,6 @@ snowflake_connection_parameters = {
     "warehouse": os.getenv("SNOWFLAKE_WAREHOUSE"),
 }
 
-print(snowflake_connection_parameters)
-
 snowpark_session = Session.builder.configs(
     snowflake_connection_parameters
 ).create()
