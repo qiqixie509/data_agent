@@ -38,11 +38,11 @@ Because the data agents at their core are performing research and generation tas
 ### RAG Triad
 - Answer Relevance
 - Context Relevance
-- Groundedness
+- Groundedness feedback: It measures if an AI's answer is supported by the source information it was given.
 ![rag_triad](pictures/RAG_triad.png)
 
 ### OpenTelemetry traces and evaluations
-
+ 
 
 ## Measure Agent's GPA
 Agents are most effective when acting in alignment with a high-quality plan. For that reason, we can identify common failure modes stemming from misalignment between the goal, the plan and the agent's actions. Then through careful criteria and a strong LLM judge, we can develop evaluators to detect these common agent failure modes and assess separable dimensions of agent quality.
