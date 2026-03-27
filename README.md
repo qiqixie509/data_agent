@@ -16,6 +16,32 @@ pip install -r requirements.txt
 ### Architecture
 ![architecture](pictures/architecture.png)
 
+### Prompt
+In this project, to get the best output from OpenAI API, the prompts distinct a system prompt and a user prompt.
+**System prompt**
+System prompt establishes the model's role, instructing it to act as a helpful assitant for story telling. 
+
+**User prompt**
+User prompt then sets up the beginning of a story, in our case, they are planner prompts and execute prompts, which providing an initial context that introduces the task to the agent.
+
+**Key tips for effective and reliable prompts**:
+- Communicate clearly and preciselywhen writing prompts. The ability to clearly state tasks and describe concepts is crucial.
+- Be  willing  to  iterate  rapidly,  sending  many  prompts  to  the  model  in  quick  succession.  Good  prompt engineers are comfortable with constant back-and-forth refinement.
+- Consider edge casesand unusual scenarios when designing prompts. Think about how your prompt might fail in a typical situations.
+- Test  your  prompts  with  imperfect,  realistic  user  inputs.  Don’t  assume  users  will  provide  perfectly formatted or grammatically correct queries.
+- Read  and  analyze  model  outputs  carefully. Pay  close  attention  to  whether  the  model  is  following instructions as intended.
+- Strip  away  assumptions  and  clearly  communicate  the  full  set  of  information  needed  for  a  task. Break down the tasksystematically to ensure all necessary details are included.
+- Think about the “theory of mind”of the model when writing prompts. Consider how the model might interpret your instructionsdifferently than intended.
+- Use version control and track experimentswhen working with prompts. Treat prompts like codein terms of management and iteration.
+- Ask  the  modelto  identify  unclear  parts  or  ambiguities  in  your  instructions.  This  can  help  refine  and improve your prompts.
+- Be precise without overcomplicating. Aim for clear  task descriptions without building unnecessary abstractions.
+- Consider the balance between typical cases and edge cases. While handling edge cases is important, don’t neglect the primary use case.
+- Think about how prompts integrate into larger systems. Consider factors like data sources, latency, and overall system design.
+- Don’t rely solely on writing skills; prompt engineering requires a mix of clear communication and systematic thinking. Good writers aren’t necessarily good prompt engineers, and vice versa.
+- When working with customers, help them understand the realities of user input. Guide them to considerreal-world usage patternsrather than idealized scenarios.
+- Practice  looking  at  data  and  model  outputs  extensively.  Familiarize  yourself  with  how  the  model responds to different types of prompts and inputs.
+
+
 ### Components
 - Planner
 - Executor
