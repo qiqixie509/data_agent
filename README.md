@@ -67,8 +67,18 @@ Because the data agents at their core are performing research and generation tas
 - Groundedness feedback: It measures if an AI's answer is supported by the source information it was given.
 ![rag_triad](pictures/RAG_triad.png)
 
-### OpenTelemetry traces and evaluations
+### Trade off between different AI agents
+**LangGraph**
+- fine-grained control 
+- production robustness
+
+**CrewAI**
+- For role-based collaboration
+- Want clean, fast prototyping
  
+**AutoGen**
+- Building conversational multi-agent pipelines
+- Especially with uman oversight
 
 ## Measure Agent's GPA
 Agents are most effective when acting in alignment with a high-quality plan. For that reason, we can identify common failure modes stemming from misalignment between the goal, the plan and the agent's actions. Then through careful criteria and a strong LLM judge, we can develop evaluators to detect these common agent failure modes and assess separable dimensions of agent quality.
