@@ -67,7 +67,9 @@ Because the data agents at their core are performing research and generation tas
 - Groundedness feedback: It measures if an AI's answer is supported by the source information it was given.
 ![rag_triad](pictures/RAG_triad.png)
 
-### Trade off between different AI agents
+
+
+## Trade off between different AI agents
 **LangGraph**
 - fine-grained control 
 - production robustness
@@ -79,6 +81,17 @@ Because the data agents at their core are performing research and generation tas
 **AutoGen**
 - Building conversational multi-agent pipelines
 - Especially with uman oversight
+
+## Improvement of the data agent (WIP)
+After finishing the basic functionalities of multi data-agent, making the agent more reliable and robust is the next step. Therefore, I started to think about how to improve the data agent in the following aspects:
+### Preventing infinite loops in agents
+### Graceful degradation when tool calls fails
+### When to use multi-agent vs single-agent architecture
+### Reducing hallucinated tool calls
+### Memory design without unbounded context growth
+### Observability and traceability
+### Permision control for internal systems and databases
+
 
 ## Measure Agent's GPA
 Agents are most effective when acting in alignment with a high-quality plan. For that reason, we can identify common failure modes stemming from misalignment between the goal, the plan and the agent's actions. Then through careful criteria and a strong LLM judge, we can develop evaluators to detect these common agent failure modes and assess separable dimensions of agent quality.
